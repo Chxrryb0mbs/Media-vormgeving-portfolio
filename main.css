@@ -1,0 +1,357 @@
+/** homepage en/of universele dingen **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: poppins, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  color: #fff;
+  background-color: #131316;
+}
+
+.hero-header {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 40px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .togglebtn {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 45px;
+  right: 3%;
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+}
+
+nav .togglebtn span {
+  display: block;
+  background-color: rgb(143, 0, 0);
+  margin: 5px 0px;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+  transition-property: transform, opacity;
+}
+
+nav .navlinks {
+  list-style-type: none;
+}
+
+nav .navlinks li {
+  display: inline-block;
+}
+
+nav .navlinks li a {
+  color: rgb(143, 0, 0);
+  margin-right: 2.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 4rem;
+}
+
+.container .hero-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid rgb(182, 9, 9);
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.hero-pic img:hover {
+  transform: scale(1.2);
+}
+
+.hero-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h5 {
+  color: #fff;
+  font-size: 14px;
+}
+
+.hero-text h5 span {
+  color: rgb(143, 0, 0);
+  font-size: 16px;
+}
+
+.hero-text h1 {
+  color: rgb(143, 0, 0);
+  font-size: 3rem;
+}
+
+.hero-text p {
+  color: #fff;
+
+}
+
+/** voor buttons homepage **/
+.btn-group {
+  margin: 45px 0;
+}
+
+.btn-group .btn {
+  border-color: gainsboro;
+  color: #fff;
+  background-color: #333;
+  padding: 12px 25px;
+  margin: 5px 0;
+  margin-right: 7px;
+  border-radius: 30px;
+  border: 2px solid rgb(255, 193, 193);
+  box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+
+.btn.active {
+  border-color: rgb(145, 0, 0);
+}
+
+/** voor navigatie op mobile/kleiner beeld **/
+
+@media (max-width:930px) {
+  nav .togglebtn {
+    display: initial;
+  }
+
+  .click {
+    top: 45px;
+  }
+
+  .click span {
+    position: absolute;
+    margin-top: 12px;
+  }
+
+  .click span:first-child {
+    transform: rotate(-40deg);
+  }
+
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+  }
+
+  .click span:last-child {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  nav .navlinks {
+    position: absolute;
+    top: 110px;
+    right: -100%;
+    bottom: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: #131316;
+    z-index: 3;
+    box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    padding: 25px 0px;
+  }
+
+  nav .navlinks li {
+    display: block;
+  }
+
+  nav .navlinks li a {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  nav .navlinks.open {
+    right: 0;
+
+  }
+}
+
+@media (max-width:768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .hero-text {
+    padding: 40px 0px;
+  }
+
+}
+
+/** voor scroll animatie about me & project pagina !! werkt niet voor een of andere reden !! **/
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 50vh;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* -- */
+button {
+  font-family: 'poppins', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+button {
+  background-color: rgb(145, 0, 0);
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-group2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  margin: 0;
+}
+
+.contactsSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  min-height: 80vh;
+}
+
+.contact-box {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  width: 500px;
+  background-color: #131316;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 15px;
+}
+
+.form-box {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #edf0f1;
+  margin: 35px;
+}
+
+.input-field {
+  width: 400px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid;
+  border-radius: 14px;
+  outline: none;
+  color: #edf0f1;
+  background-color: #313131;
+
+}
+
+.text-area {
+  background-color: #313131;
+  height: 70px;
+}
+
+.send-message-button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #edf0f1;
+  background-color: red;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: 18px;
+  padding: 10px;
+}
+
+h2{
+  text-align: center;
+}
+h3{
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 10vh;
+}
+#edits{
+  height: 360px;
+  padding: 50px;
+  align-items: center;
+}
+#school-work{
+  height: 360px;
+  padding: 50px;
+  align-items: center;
+}
+#client-work{
+  height: 360px;
+  padding: 50px;
+  align-items: center;
+  
+}
+/* Zal ik doen :>. Maak je niet al te veel zorgen */
