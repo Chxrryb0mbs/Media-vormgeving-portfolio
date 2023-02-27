@@ -52,7 +52,6 @@ nav .togglebtn {
   cursor: pointer;
   display: none;
 }
-
 nav .togglebtn span {
   display: block;
   background-color: rgb(143, 0, 0);
@@ -72,7 +71,7 @@ nav .navlinks li {
 }
 
 nav .navlinks li a {
-  color: rgb(143, 0, 0);
+  color: rgb(201, 201, 201);
   margin-right: 2.5rem;
 }
 
@@ -352,6 +351,11 @@ h3{
   height: 360px;
   padding: 50px;
   align-items: center;
-  
+}
+#LinkedIn{
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 10vh;
 }
 /* Zal ik doen :>. Maak je niet al te veel zorgen */
